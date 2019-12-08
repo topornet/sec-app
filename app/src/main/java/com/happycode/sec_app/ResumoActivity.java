@@ -1,9 +1,10 @@
 package com.happycode.sec_app;
 
+import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class ResumoActivity extends AppCompatActivity {
+public class ResumoActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

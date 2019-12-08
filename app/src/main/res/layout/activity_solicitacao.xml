@@ -6,8 +6,47 @@
     android:layout_height="match_parent"
     tools:context=".SolicitacaoActivity">
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="O que você quer fazer?"
+        android:textSize="30dp"/>
+
     <Button
-        android:layout_width="50dp"
-        android:layout_height="30dp" />
+        android:id="@+id/btnVenda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:layout_centerHorizontal="true"
+        android:text="VENDER"
+        android:textColor="@color/colorPrimary"
+        android:textSize="35dp"
+        android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/btnCompra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/btnVenda"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+        android:text="COMPRAR"
+        android:textColor="@color/colorPrimary"
+        android:textSize="35dp"
+        android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/btnVoltarMainActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true"
+        android:text="Voltar"
+        android:textColor="@color/colorPrimaryDark"/>
 
 </RelativeLayout>
