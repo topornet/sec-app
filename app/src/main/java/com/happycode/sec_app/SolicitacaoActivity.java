@@ -7,7 +7,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import java.security.PrivateKey;
+
 public class SolicitacaoActivity extends Activity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +24,9 @@ public class SolicitacaoActivity extends Activity {
         super.onResume();
 
         Button voltarMainActivity = (Button) findViewById(R.id.btnVoltarMainActivity);
+        Button vender = (Button) findViewById(R.id.btnVenda);
+        Button comprar = (Button) findViewById(R.id.btnCompra);
+
 
         voltarMainActivity.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -30,8 +36,6 @@ public class SolicitacaoActivity extends Activity {
             }
         });
 
-        Button vender = (Button) findViewById(R.id.btnVenda);
-
         vender.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -39,8 +43,6 @@ public class SolicitacaoActivity extends Activity {
                 startActivity(intent);
             }
         });
-
-        Button comprar = (Button) findViewById(R.id.btnCompra);
 
         comprar.setOnClickListener(new View.OnClickListener() {
             @Override

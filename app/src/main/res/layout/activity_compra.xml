@@ -28,4 +28,11 @@
         android:text="Voltar"
         android:textColor="@color/colorPrimaryDark" />
 
+    <ListView
+        android:id="@+id/list_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </ListView>
+
 </RelativeLayout>
