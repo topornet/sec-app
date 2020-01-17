@@ -20,8 +20,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="300dp"
-        android:text="Security Exchange Coins"/>
+        android:layout_marginTop="400dp"
+        android:text="Security Exchange Coins"
+        android:textSize="20dp"/>
 
     <Button
         android:id="@+id/btnGoToSolicitacao"
