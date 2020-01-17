@@ -9,32 +9,31 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 
+import java.util.ArrayList;
+
 public class CompraActivity extends Activity {
-    private ListView listaUsuarios;
-    private String  [] usuarios = {
-            "usuario1 - 10",
-            "usuario2 - 20",
-            "usuario3 - 40",
-            "usuario4 - 15",
-            "usuario5 - 17",
-            "usuario6 - 26"
-    };
+    private ListView listView;
+
+    ArrayList<Usuario> list = new ArrayList<Usuario>();
+    ListAdapterUsuario adapterUsuario;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_compra);
 
-        listaUsuarios = (ListView) findViewById(R.id.list_item);
+        for (int id = 1;id<=10;id++) {
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(
-                getApplicationContext(),
-                android.R.layout.simple_list_item_1,
-                android.R.id.text1,
-                usuarios
-        );
+            Usuario usuario = new Usuario();
+            usuario.setNome("Usuario "+id);
+            usuario.setQtdCoins(10+id);
+            list.add(usuario);
+        }
 
-        listaUsuarios.setAdapter(adapter);
+
+        listView = (ListView) findViewById(R.id.list_item);
+        adapterUsuario = new ListAdapterUsuario(this,list);
+        listView.setAdapter(adapterUsuario);
 
     }
 
