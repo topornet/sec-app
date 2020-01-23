@@ -29,12 +29,12 @@
         android:textColor="@color/colorPrimaryDark" />
 
     <ListView
-        android:id="@+id/list_item"
+        android:id="@+id/list_vendedores"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="300dp"
         android:layout_marginTop="60dp"
         android:background="@color/colorPrimary"
-        android:dividerHeight="8dp">
+        android:dividerHeight="4dp">
 
     </ListView>
 

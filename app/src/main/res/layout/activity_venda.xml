@@ -29,4 +29,14 @@
         android:text="Voltar"
         android:textColor="@color/colorPrimaryDark" />
 
+    <ListView
+        android:id="@+id/list_compradores"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="60dp"
+        android:background="@color/colorPrimary"
+        android:dividerHeight="4dp">
+
+    </ListView>
+
 </RelativeLayout>

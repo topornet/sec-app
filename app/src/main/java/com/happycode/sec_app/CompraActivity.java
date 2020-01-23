@@ -5,36 +5,52 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
 public class CompraActivity extends Activity {
-    private ListView listView;
 
-    ArrayList<Usuario> list = new ArrayList<Usuario>();
+    ArrayList<Usuario> lista = new ArrayList<Usuario>();
     ListAdapterUsuario adapterUsuario;
+    ListView listView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_compra);
 
-        for (int id = 1;id<=10;id++) {
+/*       for (int id = 1;id<=10;id++) {
 
             Usuario usuario = new Usuario();
             usuario.setNome("Usuario "+id);
             usuario.setQtdCoins(10+id);
-            list.add(usuario);
+           lista.add(usuario);
+       }
+*/
+        for (int id = 1;id <= 10;id++) {
+            lista.add(new Usuario("Usuario "+id, 100+id));
         }
 
 
-        listView = (ListView) findViewById(R.id.list_item);
-        adapterUsuario = new ListAdapterUsuario(this,list);
+        listView = (ListView) findViewById(R.id.list_vendedores);
+
+        adapterUsuario = new ListAdapterUsuario(this, lista);
+
         listView.setAdapter(adapterUsuario);
 
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                int codeposition = position;
+                String usuarioEscolhido = lista.get(codeposition).getNome();
+                Toast.makeText(getApplicationContext(), usuarioEscolhido, Toast.LENGTH_LONG).show();
+            }
+        });
     }
 
 

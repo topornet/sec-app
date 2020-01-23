@@ -20,4 +20,4 @@
         android:layout_marginLeft="21dp"
         android:layout_toRightOf="@+id/textview" />
 
-    </RelativeLayout>
+</RelativeLayout>
