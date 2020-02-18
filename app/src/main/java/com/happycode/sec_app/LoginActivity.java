@@ -5,6 +5,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -24,10 +28,22 @@ public class LoginActivity extends AppCompatActivity {
         telaSolicitacao.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                
+                String usuario =  ((EditText) findViewById(R.id.username)).getText().toString();
+                String senha = ((EditText)findViewById(R.id.password)).getText().toString();
 
-                Intent intent = new Intent(LoginActivity.this, SolicitacaoActivity.class);
-                startActivity(intent);
+                String usuref = "marco";
+                String senharef = "123";
+
+                if (!usuario.equals(usuref) || !senha.equals(senharef)){
+                    Toast.makeText(getApplicationContext(),"Usuário ou senha inválidos",Toast.LENGTH_SHORT).show();
+                } else {
+
+
+                    Intent intent = new Intent(LoginActivity.this, SolicitacaoActivity.class);
+                    intent.putExtra("usuario",usuario);
+                    intent.putExtra("saldo", 15000F);
+                    startActivity(intent);
+                }
             }
         });
 
