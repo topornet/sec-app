@@ -21,6 +21,13 @@ public class ListAdapterUsuario extends ArrayAdapter<Usuario> {
         super(context, 0,lista);
         this.context = context;
         this.lista = lista;
+        carregarLista();
+    }
+
+    private void carregarLista() {
+        for (int id = 1;id <= 10;id++) {
+            lista.add(new Usuario("Usuario "+id, 100+id));
+        }
     }
 
     @NonNull

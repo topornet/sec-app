@@ -22,11 +22,11 @@ public class VendaActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_venda);
-
+/*
         for (int id = 1;id <= 10;id++) {
             lista.add(new Usuario("Usuario "+id, 100+id));
         }
-
+*/
 
         listView = (ListView) findViewById(R.id.list_compradores);
 

@@ -18,6 +18,52 @@
         android:textStyle="bold"
         android:textColor="@color/colorPrimary"/>
 
+    <TextView
+        android:id="@+id/lblSaldoAtual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="270dp"
+        android:text="Saldo atual: "
+        android:textColor="@color/colorPrimary"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/saldoAtual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="270dp"
+        android:text="Saldo atual: "
+        android:textColor="@color/colorPrimary"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/lblQtdComprar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="300dp"
+        android:text="Quantidade a comprar: "
+        android:textColor="@color/colorPrimary"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/qtdComprar"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="290dp"
+        android:layout_marginEnd="50dp"
+        android:ems="10"
+        android:hint="Digite o valor aqui"
+        android:inputType="numberDecimal"
+        android:textColor="@color/colorPrimaryDark" />
+
     <Button
         android:id="@+id/btnVoltarSolicitacao"
         android:layout_width="wrap_content"
@@ -28,14 +74,28 @@
         android:text="Voltar"
         android:textColor="@color/colorPrimaryDark" />
 
+    <Button
+        android:id="@+id/btnConfirmar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="-128dp"
+        android:layout_marginBottom="87dp"
+        android:layout_toStartOf="@id/btnVoltarSolicitacao"
+        android:text="Confirmar Compra"
+        android:textColor="@color/colorPrimaryDark" />
+
     <ListView
         android:id="@+id/list_vendedores"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="200dp"
         android:layout_marginTop="60dp"
         android:background="@color/colorPrimary"
         android:dividerHeight="4dp">
 
     </ListView>
+
+
 
 </RelativeLayout>
